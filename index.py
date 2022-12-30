@@ -28,5 +28,4 @@ def predict():
     a=model.predict(pd.DataFrame([[c,t,f,s,o,y,k]],columns=['company', 'transmission', 'fuel', 'seller_type', 'owner', 'year',
        'km_driven']))[0]
     return render_template("index.html",pred=a)
-if __name__=="__main__":
-    app.run(port=3000,debug=True)
+
